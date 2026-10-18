@@ -3,6 +3,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from "react";
 import { PROJECT_CATEGORIES, projects as rawProjects } from "../../constants";
+import { ImageSlider } from "./ImageSlider";
 import { InViewVideo } from "./InViewVideo";
 import { SectionHeading } from "./SectionHeading";
 
@@ -17,6 +18,7 @@ type Project = {
   detailedDescription: string;
   tags: string[];
   videos?: string[];
+  images?: string[];
   live_link?: string;
 };
 
@@ -43,7 +45,12 @@ function ProjectMedia({ project }: { project: Project }) {
   const [index, setIndex] = useState(0);
   const total = videos.length;
 
-  if (total === 0) return null;
+  if (total === 0) {
+    if (!project.images?.length) return null;
+    return (
+      <ImageSlider images={project.images} alt={`${project.name}の画面`} controls fit className="rounded-lg" />
+    );
+  }
 
   const goTo = (next: number) => setIndex((next + total) % total);
 
@@ -181,6 +188,8 @@ function ProjectCard({ project, compact, onOpen }: { project: Project; compact: 
       <div className="project-thumb">
         {project.videos?.[0] ? (
           <InViewVideo src={project.videos[0]} className="h-full w-full object-cover" />
+        ) : project.images?.length ? (
+          <ImageSlider images={project.images} alt={`${project.name}の画面`} className="h-full w-full" />
         ) : (
           <ProjectPoster project={project} />
         )}

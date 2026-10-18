@@ -13,6 +13,11 @@ import {
   trustVideos,
   norumanVideos,
   clinicAIVideos,
+  ecVideos,
+  meoImages,
+  aiSecretaryImages,
+  homeVillageImages,
+  orderPdfToolImages,
 } from "../assets";
 
 export const PROJECT_CATEGORIES = [
@@ -24,6 +29,7 @@ export const PROJECT_CATEGORIES = [
 ];
 
 // `metric` is a single verified result shown on the card; `role` summarises scope.
+// Media: `videos` play on loop; `images` auto-slide (used where there is no screen recording).
 export const projects = [
   {
     id: "meo",
@@ -37,6 +43,7 @@ export const projects = [
     detailedDescription:
       "・Next.js / TypeScript / PostgreSQL による多店舗管理システム。店舗別設定、管理者権限、集計・CSV出力を実装。\n・QRアンケートと店内フィードバック収集、Claude API によるクチコミ文案生成（編集・再生成対応）。\n・DataForSEO による検索順位の自動計測と推移グラフ、ChatGPT・Perplexity での店舗言及を記録する AIO 診断。\n・Google Business Profile API / OAuth 2.0 による店舗別アカウント連携、投稿・画像登録・予約公開。\n・API の制約に合わせ、15分間隔の予約公開バッチと失敗時の再試行・エラー可視化を独自実装。既存インフラを活用し、追加の固定費を抑えました。",
     tags: ["Next.js", "TypeScript", "PostgreSQL", "Claude API", "GBP API", "VPS"],
+    images: meoImages,
     live_link: "https://meo.believes.jp/",
   },
   {
@@ -51,6 +58,7 @@ export const projects = [
     detailedDescription:
       "・LLM API と音声認識・音声合成を連携。無音検知による発話区切り、文単位の先行読み上げ、回答のストリーミング表示を実装。\n・LINE Messaging API による本人限定の対話、Google Sheets API / OAuth 2.0 による閲覧専用のデータ連携と経費の自動集計。\n・平日8時の自動レポート配信、二層式の記憶機能、画像生成、ファイル添付、PWA 対応。\n・Linux VPS へ移行し、systemd による常時稼働・自動復旧、Cloudflare Tunnel による HTTPS 公開と認証を整備。\n・文単位の先行読み上げで応答時間を約60%短縮。会話134件・1,034メッセージを停止時間なしで移行しました。",
     tags: ["LLM API", "音声認識・合成", "LINE API", "OAuth 2.0", "PWA", "Linux VPS"],
+    images: aiSecretaryImages,
     live_link: "https://social-ai01.com/",
   },
   {
@@ -92,6 +100,46 @@ export const projects = [
       "・構造図PDFから寸法・部材情報を抽出し、半自動で3D化。\n・基礎／地中梁／スラブのデータ抽出と照合処理。\n・特殊型枠面積の自動算出（手動での調整にも対応）。",
     tags: ["Python"],
     videos: constructionAutoToolVideos,
+  },
+  {
+    id: "order-pdf-tool",
+    name: "発注PDF → Excel 取込ツール",
+    category: "workflow-automation",
+    role: "設計・実装・配布",
+    metric: "5営業所の発注PDFを一括変換",
+    description:
+      "5営業所（京都・南大阪・奈良・和歌山・滋賀）から毎日届く発注PDFを、Excelに取り込める形式へ自動変換するツールを開発しました。",
+    detailedDescription:
+      "・フォルダ内のPDFを一括処理（個別ファイルの指定にも対応）。\n・明細シート：納品日／営業所／品名／発注数を出力。\n・営業所別集計シート：品名 × 営業所のクロス集計を自動作成。\n・警告シート：合計の不一致や読み取れないPDFを検知して一覧化。\n・動作環境は Windows 10 / 11（64bit）。現場向けには Python 不要の GUI 版を配布パッケージで提供し、開発者向けに CLI 版（Python 3.12 以上）も用意しました。",
+    tags: ["Python", "PDF解析", "Excel出力", "GUI / CLI"],
+    images: orderPdfToolImages,
+  },
+  {
+    id: "home-village",
+    name: "再エネ・電源地開発会社 コーポレートサイト",
+    category: "hp-lp-coding",
+    role: "企画・デザイン〜公開",
+    metric: "Figmaデザインから公開まで一貫担当",
+    description:
+      "法人取引先・金融機関・土地所有者・採用候補者に、信頼感と専門性が伝わるサイトへ刷新。FVのイラスト制作からWordPress構築・公開まで担当しました。",
+    detailedDescription:
+      "・会社案内にとどまらず、法人取引先・金融機関・事業パートナー・土地所有者・採用候補者に、企業としての信頼感・専門性・成長性を伝えることを目的に刷新。\n・Figma でサイト全体の UI/UX と各ページをデザイン。再エネ企業らしいクリーンさを持たせつつ、環境系のイメージに寄りすぎず、BtoB 企業としての堅実さが伝わるトーンにしました。\n・トップページのファーストビューは、コンセプト設計からオリジナルのイラスト制作まで担当。「土地の可能性をエネルギーインフラにつなげる」という事業内容を、初めて訪れた方にも直感的に伝わるビジュアルに仕上げています。\n・HTML / CSS / JavaScript でコーディングし、WordPress のオリジナルテーマとして構築。「お知らせ」「実績」「採用情報」はクライアント様自身が更新できるようカスタム投稿化しました。\n・Contact Form 7 による2種類の問い合わせフォーム、レスポンシブ対応とスマートフォンでの UI/UX 調整、基本的な SEO 対策、表示速度の改善、本番公開まで対応しました。",
+    tags: ["Figma", "WordPress", "HTML", "CSS", "JavaScript", "Contact Form 7"],
+    images: homeVillageImages,
+    live_link: "https://home-v.net/",
+  },
+  {
+    id: "ec-site",
+    name: "ECサイト 全102ページ コーディング",
+    category: "hp-lp-coding",
+    role: "コーディング（PC・SP）",
+    metric: "全102ページを静的HTMLで構築",
+    description:
+      "支給デザインをもとに、CMSを使わない静的HTMLでECサイト全102ページをコーディングしました。PC・SPのレスポンシブに対応しています。",
+    detailedDescription:
+      "・支給されたデザインデータをもとに、HTML / CSS / JavaScript で EC サイト全102ページをコーディング（CMS は使用せず静的 HTML）。\n・商品ページ62ページは1種類のデザインテンプレートをもとに、商品ごとに画像とテキストを差し替えて構築。\n・その他の約40ページ（TOP・カテゴリ一覧・商品一覧・ご利用ガイド・FAQ・お問い合わせ・ポリシーなど）は、ページごとに異なる情報量とレイアウトに合わせて実装。\n・PC・SP のレスポンシブ対応。",
+    tags: ["HTML", "CSS", "JavaScript", "レスポンシブ"],
+    videos: ecVideos,
   },
   {
     id: "kinkaitori",
