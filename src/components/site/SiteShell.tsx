@@ -27,7 +27,7 @@ export function SiteShell() {
 
       const context = gsap.context(() => {
         gsap.to("[data-hero-visual]", {
-          y: 70,
+          y: 48,
           ease: "none",
           scrollTrigger: {
             trigger: "#top",

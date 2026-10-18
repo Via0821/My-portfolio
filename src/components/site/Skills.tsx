@@ -7,7 +7,7 @@ const technologies = rawTechnologies as Technology[];
 
 export function Skills() {
   return (
-    <section id="skills" className="border-t border-line" aria-labelledby="skills-title">
+    <section id="skills" className="scroll-mt-24 border-t border-line" aria-labelledby="skills-title">
       <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
         <div data-reveal className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>

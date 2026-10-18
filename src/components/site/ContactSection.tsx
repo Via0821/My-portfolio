@@ -64,7 +64,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="border-t border-line" aria-labelledby="contact-title">
+    <section id="contact" className="scroll-mt-24 border-t border-line" aria-labelledby="contact-title">
       <div className="mx-auto grid max-w-6xl gap-14 px-5 py-24 md:px-8 md:py-32 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
         <div data-reveal>
           <p className="text-[12px] tracking-[0.28em] text-accent">06 — CONTACT</p>

@@ -169,7 +169,7 @@ export function SelectedProjects() {
   const selected = projects.find((project) => project.id === selectedId) ?? null;
 
   return (
-    <section id="projects" className="border-t border-line" aria-labelledby="projects-title">
+    <section id="projects" className="scroll-mt-24 border-t border-line" aria-labelledby="projects-title">
       <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
         <div data-reveal className="max-w-3xl">
           <p className="text-[12px] tracking-[0.28em] text-accent">02 — SELECTED PROJECTS</p>

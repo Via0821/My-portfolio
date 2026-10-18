@@ -2,7 +2,7 @@ import { timeline } from "./content";
 
 export function AboutTimeline() {
   return (
-    <section id="about" className="border-t border-line" aria-labelledby="about-title">
+    <section id="about" className="scroll-mt-24 border-t border-line" aria-labelledby="about-title">
       <div className="mx-auto grid max-w-6xl gap-16 px-5 py-24 md:px-8 md:py-32 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
         <div data-reveal>
           <p className="text-[12px] tracking-[0.28em] text-accent">05 — ABOUT</p>
@@ -20,7 +20,7 @@ export function AboutTimeline() {
           </div>
         </div>
 
-        <ol className="relative space-y-0 border-l border-line pl-8">
+        <ol id="career" className="relative scroll-mt-28 space-y-0 border-l border-line pl-8">
           {timeline.map((item) => (
             <li key={item.label} data-reveal className="relative pb-12 last:pb-0">
               <span className="absolute -left-[39px] top-1.5 h-2.5 w-2.5 bg-accent" aria-hidden="true" />

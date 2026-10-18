@@ -1,10 +1,10 @@
 export const navItems = [
-  { id: "services", label: "できること" },
+  { id: "top", label: "ホーム" },
+  { id: "about", label: "私について" },
   { id: "projects", label: "実績" },
   { id: "skills", label: "スキル" },
-  { id: "values", label: "考え方" },
-  { id: "about", label: "経歴" },
-  { id: "contact", label: "連絡" },
+  { id: "career", label: "経歴" },
+  { id: "contact", label: "お問い合わせ" },
 ] as const;
 
 export const services = [
