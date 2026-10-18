@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Petals } from "./Petals";
+import { resume } from "./content";
 
 const reveal = {
   hidden: { opacity: 0, y: 18 },
@@ -21,9 +22,9 @@ export function Hero() {
       id="top"
       className="relative isolate grid overflow-hidden bg-[#f3efe6] text-[#1c2744] min-[769px]:min-h-[100svh] min-[769px]:bg-[#1a140f]"
     >
-      <img src="/fv-bg_sp.png" alt="" className="col-start-1 row-start-1 h-auto w-full self-start min-[769px]:hidden" />
+      <img src="/fv-bg_sp.webp" alt="" fetchPriority="high" className="col-start-1 row-start-1 h-auto w-full self-start min-[769px]:hidden" />
       <div className="absolute inset-0 hidden min-[769px]:block">
-        <img src="/fv-bg.png" alt="" className="h-full w-full object-cover object-center" />
+        <img src="/fv-bg.webp" alt="" fetchPriority="high" className="hero-bg h-full w-full object-cover object-center" />
       </div>
       <Petals />
 
@@ -43,7 +44,7 @@ export function Hero() {
             </motion.p>
             <motion.h1
               variants={reveal}
-              className="sp-title mt-3 font-sans text-[clamp(1.7rem,3.7vw,3.15rem)] font-bold leading-[1.28] tracking-tight text-[#17233f] min-[769px]:mt-5"
+              className="sp-title mt-3 font-display text-[clamp(1.7rem,3.7vw,3.15rem)] font-bold leading-[1.32] tracking-[0.02em] text-[#17233f] min-[769px]:mt-5"
             >
               フロントエンドを軸に、
               <br />
@@ -63,8 +64,8 @@ export function Hero() {
                 <Arrow />
               </a>
               <a
-                href="/resume.png"
-                download="金本卓弥-resume.png"
+                href={resume.href}
+                download={resume.filename}
                 className="sp-btn inline-flex h-11 items-center gap-2 rounded-lg border border-[#1c2744]/30 bg-white/80 px-5 text-[13px] text-[#1c2744] transition-colors hover:border-[#1c2744]"
               >
                 職務経歴書をダウンロード
@@ -79,12 +80,12 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.45 }}
             className="sp-stats mt-6 grid max-w-[12.5rem] grid-cols-1 gap-2.5 sm:max-w-[22rem]"
           >
-            <div className="stat-card" aria-label="実務経験年数 8">
+            <div className="stat-card" role="img" aria-label="実務経験年数 8年以上">
               <ExperienceRing reduce={reduce} />
               <p className="sp-label text-[12px] leading-snug text-[#6d675e]">実務経験年数</p>
             </div>
             <div className="stat-card">
-              <img src="/layer-icon.png" alt="" className="sp-layer h-10 w-10 shrink-0 object-contain" />
+              <img src="/layers.webp" alt="" className="sp-layer h-10 w-10 shrink-0 object-contain" />
               <div>
                 <p className="sp-figure font-sans text-[1.45rem] font-medium leading-none tracking-tight text-[#1c2744]">100+</p>
                 <p className="sp-caption mt-1 text-[11px] text-[#6d675e]">対応案件数</p>
@@ -92,10 +93,10 @@ export function Hero() {
             </div>
             <div className="stat-card stat-card-gold">
               <p className="foil-lines">
-                <span>迅速</span>
-                <span>丁寧</span>
-                <span>誠実に</span>
+                <span>応用情報</span>
+                <span>技術者</span>
               </p>
+              <p className="sp-caption foil-caption text-[11px] text-[#6d675e]">国家資格 2022</p>
             </div>
           </motion.div>
         </div>
@@ -129,7 +130,7 @@ function ExperienceRing({ reduce }: { reduce: boolean | null }) {
   return (
     <div className="sp-ring relative h-12 w-12 shrink-0" aria-hidden="true">
       <img
-        src="/eghit-icon.png"
+        src="/eight-ring.webp"
         alt=""
         className="h-full w-full object-contain"
         style={{
