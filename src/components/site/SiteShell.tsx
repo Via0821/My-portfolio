@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { AboutIntro } from "./AboutIntro";
 import { AboutTimeline } from "./AboutTimeline";
 import { ContactSection } from "./ContactSection";
 import { CustomCursor } from "./CustomCursor";
@@ -8,7 +9,6 @@ import { Header } from "./Header";
 import { Hero } from "./Hero";
 import { SelectedProjects } from "./SelectedProjects";
 import { Skills } from "./Skills";
-import { WhatIDo } from "./WhatIDo";
 import { WorkingStyle } from "./WorkingStyle";
 
 export function SiteShell() {
@@ -68,7 +68,7 @@ export function SiteShell() {
       <Header />
       <main className="relative z-10">
         <Hero />
-        <WhatIDo />
+        <AboutIntro />
         <SelectedProjects />
         <Skills />
         <WorkingStyle />

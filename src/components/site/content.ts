@@ -7,33 +7,6 @@ export const navItems = [
   { id: "contact", label: "お問い合わせ" },
 ] as const;
 
-export const services = [
-  {
-    index: "01",
-    title: "インターフェース",
-    lead: "画面の精度",
-    body: "React / Next.js を軸に、情報の階層、余白、タイポグラフィ、動きまで含めて設計します。見た目の再現ではなく、読みやすさと操作の意図が残る実装にします。",
-  },
-  {
-    index: "02",
-    title: "業務システム",
-    lead: "現場で使えること",
-    body: "数字、入力、一覧、比較。現場の手順がそのまま画面になるように、ダッシュボードや社内ツールを組み立てます。",
-  },
-  {
-    index: "03",
-    title: "接続",
-    lead: "必要なところだけ",
-    body: "API、スプレッドシート、WordPress、決済。画面の外側にあるデータや仕組みを、必要な範囲でつなぎます。",
-  },
-  {
-    index: "04",
-    title: "運用",
-    lead: "公開のあと",
-    body: "VPSへの公開、その後の改修、保守のしやすさまで見ます。動いた時点で完成にはしません。",
-  },
-] as const;
-
 export const values = [
   {
     index: "01",

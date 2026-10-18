@@ -2,11 +2,11 @@ import { timeline } from "./content";
 
 export function AboutTimeline() {
   return (
-    <section id="about" className="scroll-mt-24 border-t border-line" aria-labelledby="about-title">
+    <section className="scroll-mt-24 border-t border-line" aria-labelledby="career-title">
       <div className="mx-auto grid max-w-6xl gap-16 px-5 py-24 md:px-8 md:py-32 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
         <div data-reveal>
           <p className="text-[12px] tracking-[0.28em] text-accent">05 — ABOUT</p>
-          <h2 id="about-title" className="mt-4 font-display text-4xl text-paper sm:text-5xl">
+          <h2 id="career-title" className="mt-4 font-display text-4xl text-paper sm:text-5xl">
             経歴
           </h2>
           <div className="mt-8 space-y-5 text-[15px] leading-8 text-muted">
