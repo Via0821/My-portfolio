@@ -3,7 +3,7 @@ import "./globals.css";
 export const metadata = {
   title: "金本 卓弥 | Portfolio",
   description:
-    "システム・Webアプリ開発からAI導入・業務自動化まで一貫対応する金本卓弥のポートフォリオ",
+    "React / Next.js を軸に、UI設計・業務システム・API・運用まで対応する金本卓弥のポートフォリオ",
   icons: {
     icon: "/icon.png",
   },
