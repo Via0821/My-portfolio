@@ -12,3 +12,5 @@ export { goyokikidoctorVideos } from "./hp-lp/goyokikidoctor";
 export { trustVideos } from "./hp-lp/trust";
 export { norumanVideos } from "./hp-lp/noruman";
 export { clinicAIVideos } from "./hp-lp/clinicAI";
+export { ecVideos } from "./hp-lp/EC";
+export { meoImages, aiSecretaryImages, homeVillageImages, orderPdfToolImages } from "./other";

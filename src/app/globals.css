@@ -1235,6 +1235,114 @@ body {
   color: transparent;
 }
 
+/* ---------- Image slider ---------- */
+.slider {
+  position: relative;
+  overflow: hidden;
+  background: var(--sumi);
+}
+
+.slider-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0;
+  transform: scale(1.05);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+/* The active slide drifts back to scale(1) over the slide's lifetime. */
+.slider-img.is-active {
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 0.9s ease,
+    transform var(--interval) linear;
+}
+
+/* An invisible copy of the first slide gives the frame its natural height. */
+.slider-sizer {
+  display: block;
+  width: 100%;
+  height: auto;
+  visibility: hidden;
+}
+
+.slider-fit .slider-img {
+  object-fit: contain;
+  transform: none;
+}
+
+/* Soft scrim so the bars read on both light dashboards and dark app screens. */
+.slider-progress {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  gap: 5px;
+  padding: 1.6rem 0.9rem 0.55rem;
+  background: linear-gradient(to bottom, transparent, rgba(23, 35, 63, 0.38));
+}
+
+.slider-bar {
+  position: relative;
+  flex: 1;
+  height: 12px;
+}
+
+.slider-bar::before,
+.slider-bar::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 0;
+  left: 0;
+  height: 2px;
+  border-radius: 2px;
+}
+
+.slider-bar::before {
+  background: rgba(244, 239, 230, 0.45);
+}
+
+.slider-bar::after {
+  background: linear-gradient(to right, #ecd7a8, #c4a574);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.slider-bar.is-done::after {
+  transform: scaleX(1);
+}
+
+.slider-bar.is-current::after {
+  animation: slider-progress var(--interval) linear forwards;
+}
+
+.slider.is-paused .slider-bar.is-current::after,
+.slider:hover .slider-bar.is-current::after,
+.slider:focus-within .slider-bar.is-current::after,
+.project-card:hover .slider-bar.is-current::after {
+  animation-play-state: paused;
+}
+
+@keyframes slider-progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.slider .media-nav {
+  z-index: 3;
+}
+
 .media-nav {
   position: absolute;
   top: 50%;
@@ -1410,7 +1518,14 @@ body {
   .project-thumb,
   .project-thumb > video,
   .btn-ink,
-  .card-more-arrow {
+  .card-more-arrow,
+  .slider-img {
     transition: none;
+  }
+
+  /* No auto-advance: the current bar never animates, so it never ends. Arrows and bars still work. */
+  .slider-bar.is-current::after {
+    animation: none;
+    transform: scaleX(0.5);
   }
 }
