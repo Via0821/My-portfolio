@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { navItems } from "./content";
+import { navItems, resume } from "./content";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -15,7 +15,7 @@ export function Header() {
       setScrolled(bottom < 72);
 
       const mark = window.scrollY + 120;
-      let current = navItems[0].id;
+      let current: string = navItems[0].id;
       for (const item of navItems) {
         const section = document.getElementById(item.id);
         if (section && section.offsetTop <= mark) current = item.id;
@@ -34,21 +34,21 @@ export function Header() {
     };
   }, [open]);
 
-  const solid = scrolled;
-  const onDark = scrolled || open;
+  // Only the open drawer sits on indigo; the bar itself stays on washi in both states.
+  const onDark = open;
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
-        solid ? "border-b border-line bg-ink/90 backdrop-blur-md" : "border-b border-transparent"
+        scrolled && !open ? "border-b border-rule bg-washi/90 backdrop-blur-md" : "border-b border-transparent"
       }`}
     >
       <div className="sp-bar relative mx-auto flex w-full items-center justify-between">
         <a href="#top" className="sp-brand flex shrink-0 items-center gap-2.5" onClick={() => setOpen(false)}>
-          <span className={`sp-logo font-display text-[1.35rem] leading-none tracking-tight ${onDark ? "text-paper" : "text-[#1c2744]"}`}>
+          <span className={`sp-logo font-display text-[1.35rem] leading-none tracking-tight ${onDark ? "text-washi" : "text-sumi"}`}>
             TK
           </span>
-          <span className={`sp-name text-[14px] tracking-[0.04em] ${onDark ? "text-paper" : "text-[#1c2744]"}`}>
+          <span className={`sp-name text-[14px] tracking-[0.04em] ${onDark ? "text-washi" : "text-sumi"}`}>
             Takuya Kanemoto
           </span>
         </a>
@@ -62,7 +62,7 @@ export function Header() {
                 href={`#${item.id}`}
                 aria-current={current ? "true" : undefined}
                 className={`nav-item relative pb-1.5 font-bold tracking-[0.02em] ${
-                  onDark ? (current ? "text-paper" : "text-muted hover:text-paper") : "text-[#1c2744]"
+                  current || !scrolled ? "text-sumi" : "text-nezumi hover:text-sumi"
                 }`}
               >
                 {item.label}
@@ -73,8 +73,8 @@ export function Header() {
 
         <div className="flex shrink-0 items-center">
           <a
-            href="/resume.png"
-            download="金本卓弥-resume.png"
+            href={resume.href}
+            download={resume.filename}
             className="resume-btn hidden items-center gap-2 rounded-full font-medium tracking-[0.04em] text-[#f6f3ec] min-[769px]:inline-flex"
           >
             最新の職務経歴書
@@ -84,7 +84,7 @@ export function Header() {
           </a>
           <button
             type="button"
-            className={`sp-menu min-[769px]:hidden ${onDark ? "text-paper" : "text-[#1c2744]"}`}
+            className={`sp-menu min-[769px]:hidden ${onDark ? "text-washi" : "text-sumi"}`}
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? "閉じる" : "メニュー"}
@@ -122,7 +122,7 @@ export function Header() {
             <li key={item.id}>
               <a
                 href={`#${item.id}`}
-                className="sp-drawer-link block py-1 text-lg text-paper"
+                className="sp-drawer-link block py-1 text-lg text-washi"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
@@ -131,9 +131,9 @@ export function Header() {
           ))}
           <li>
             <a
-              href="/resume.png"
-              download="金本卓弥-resume.png"
-              className="sp-drawer-link block py-1 text-lg text-paper"
+              href={resume.href}
+              download={resume.filename}
+              className="sp-drawer-link block py-1 text-lg text-kin-leaf"
               onClick={() => setOpen(false)}
             >
               最新の職務経歴書

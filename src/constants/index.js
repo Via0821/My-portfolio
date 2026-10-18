@@ -1,38 +1,4 @@
 import {
-  aws,
-  backend,
-  carrent,
-  chatgpt,
-  claude,
-  creator,
-  css,
-  education,
-  figma,
-  firebase,
-  gemini,
-  git,
-  github,
-  html,
-  javascript,
-  jobit,
-  mobile,
-  mongodb,
-  mysql,
-  nodejs,
-  parcare,
-  php,
-  postgresql,
-  python,
-  reactjs,
-  resume,
-  social,
-  sorting,
-  supabase,
-  tailwind,
-  tripguide,
-  typescript,
-  web,
-  work,
   kinkaitoriVideos,
   foodWholesaleVideos,
   constructionAutoToolVideos,
@@ -48,600 +14,191 @@ import {
   norumanVideos,
   clinicAIVideos,
 } from "../assets";
-export const navLinks = [
-  {
-    id: "about",
-    title: "自己紹介",
-  },
-  {
-    id: "work",
-    title: "実績",
-  },
-  {
-    id: "contact",
-    title: "お問い合わせ",
-  },
-];
-
-const services = [
-  {
-    title: "フロントエンド エンジニア",
-    icon: web,
-  },
-  {
-    title: "バックエンド　エンジニア",
-    icon: backend,
-  },
-  {
-    title: "業務自動化ツール",
-    icon: mobile,
-  },
-  {
-    title: "AI エンジニア",
-    icon: creator,
-  },
-];
-
-const technologies = [
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-
-  {
-    name: "PHP",
-    icon: php,
-  },
-
-  {
-    name: "Python",
-    icon: python,
-  },
-
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-
-  {
-    name: "mysql",
-    icon: mysql,
-  },
-
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-
-  {
-    name: "PostgreSQL",
-    icon: postgresql,
-  },
-
-  {
-    name: "git",
-    icon: git,
-  },
-
-  {
-    name: "GitHub",
-    icon: github,
-  },
-
-  {
-    name: "Supabase",
-    icon: supabase,
-  },
-
-  {
-    name: "Firebase",
-    icon: firebase,
-  },
-
-  {
-    name: "AWS",
-    icon: aws,
-  },
-
-  {
-    name: "ChatGPT",
-    icon: chatgpt,
-  },
-
-  {
-    name: "Gemini",
-    icon: gemini,
-  },
-
-  {
-    name: "Claude",
-    icon: claude,
-  },
-];
-
-const experiences = [
-  {
-    title: "Bachelor of Engineering",
-    company_name: "University College of Engineering, Anna University, Chennai",
-    icon: education,
-    iconBg: "#E6DEDD",
-    date: "August 2016 - May 2020",
-    points: ["Computer Science and Engineering"],
-  },
-  {
-    title: "Software Engineering Trainee",
-    company_name: "Ameex Technologies",
-    icon: work,
-    iconBg: "#E6DEDD",
-    date: "October 2020 - August 2021",
-    points: [
-      "Completed intensive training in UI/UX Design, Android development, and software quality assurance, acquiring skills crucial for modern software development",
-      "Developed a strong foundation in UI/UX design principles, applying them effectively in creating designs for native mobile and web applications",
-      "Conducted user interviews and usability tests to gather user feedback, which improved the UX design and led to valuable enhancements",
-      "Created low and high-fidelity wireframes and prototypes, collaborating closely with product managers and a team of designers to refine product features",
-      "Actively contributed to Agile sprints, ensuring timely feature delivery and continuous integration",
-    ],
-  },
-  {
-    title: "Associate Software Engineer",
-    company_name: "Ameex Technologies",
-    icon: work,
-    iconBg: "#E6DEDD",
-    date: "September 2021 - March 2022",
-    points: [
-      "Engineered scalable, efficient solutions that enhanced user experience and performance",
-      "Developed and maintained complex web applications using HTML,CSS,JavaScript,PHP, MySQL,AJAX",
-      "Enhanced and streamlined the database architecture to improve data retrieval speed, achieving a 30% reduction in query response time while ensuring seamless user experience during peak traffic periods",
-      "Implemented rigorous performance assessments across all web applications, utilizing automated testing tools that increased testing efficiency by 60%, enabling faster deployment cycles and improved software reliability",
-      "Conducted in-depth performance analysis, optimizing system efficiency through detailed reports",
-      "Completed relevant online courses, leading to the successful implementation of features that resolved four critical bugs in existing applications, improving overall user experience",
-    ],
-  },
-];
-
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
 
 export const PROJECT_CATEGORIES = [
   { id: "all", label: "すべて" },
-  { id: "hp-lp-coding", label: "HP/LPコーディング" },
-  { id: "workflow-automation", label: "業務自動化ツール" },
   { id: "web-systems", label: "Webシステム" },
   { id: "ai", label: "AI" },
+  { id: "workflow-automation", label: "業務自動化ツール" },
+  { id: "hp-lp-coding", label: "HP/LPコーディング" },
 ];
 
-const projects = [
+// `metric` is a single verified result shown on the card; `role` summarises scope.
+export const projects = [
+  {
+    id: "meo",
+    name: "多店舗向けMEO支援システム",
+    category: "web-systems",
+    period: "2026",
+    role: "1名体制／要件整理〜運用",
+    metric: "約1か月で本番稼働",
+    description:
+      "月額5万円の外部MEOツールを内製化。クチコミ収集、検索順位計測、Googleビジネスプロフィール投稿管理を一つのシステムに統合しました。",
+    detailedDescription:
+      "・Next.js / TypeScript / PostgreSQL による多店舗管理システム。店舗別設定、管理者権限、集計・CSV出力を実装。\n・QRアンケートと店内フィードバック収集、Claude API によるクチコミ文案生成（編集・再生成対応）。\n・DataForSEO による検索順位の自動計測と推移グラフ、ChatGPT・Perplexity での店舗言及を記録する AIO 診断。\n・Google Business Profile API / OAuth 2.0 による店舗別アカウント連携、投稿・画像登録・予約公開。\n・API の制約に合わせ、15分間隔の予約公開バッチと失敗時の再試行・エラー可視化を独自実装。既存インフラを活用し、追加の固定費を抑えました。",
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Claude API", "GBP API", "VPS"],
+    live_link: "https://meo.believes.jp/",
+  },
+  {
+    id: "ai-secretary",
+    name: "日本語AI秘書（音声対話・LINE連携）",
+    category: "ai",
+    period: "2026",
+    role: "1名体制／UI設計〜本番運用",
+    metric: "音声応答 10.5秒 → 4.2秒",
+    description:
+      "日本語の音声対話、LINE連携、業務データ参照に対応した個人向けAIアシスタント。要件整理からVPS移行・本番運用まで担当しました。",
+    detailedDescription:
+      "・LLM API と音声認識・音声合成を連携。無音検知による発話区切り、文単位の先行読み上げ、回答のストリーミング表示を実装。\n・LINE Messaging API による本人限定の対話、Google Sheets API / OAuth 2.0 による閲覧専用のデータ連携と経費の自動集計。\n・平日8時の自動レポート配信、二層式の記憶機能、画像生成、ファイル添付、PWA 対応。\n・Linux VPS へ移行し、systemd による常時稼働・自動復旧、Cloudflare Tunnel による HTTPS 公開と認証を整備。\n・文単位の先行読み上げで応答時間を約60%短縮。会話134件・1,034メッセージを停止時間なしで移行しました。",
+    tags: ["LLM API", "音声認識・合成", "LINE API", "OAuth 2.0", "PWA", "Linux VPS"],
+    live_link: "https://social-ai01.com/",
+  },
   {
     id: "clinicAI",
-    name: "AIによる医療業務の効率化支援",
+    name: "クリニック向けAI経営ダッシュボード",
     category: "ai",
+    role: "データ連携〜UI設計",
+    metric: "4院の経営データを一元化",
     description:
-      "AI健全経営ダッシュボード｜医療クリニック向け経営分析・異常検知システムを制作ました",
+      "呼吸器内科クリニック4院の経営データを可視化し、AIによる分析コメントと異常検知アラートを備えたダッシュボードを開発しました。",
     detailedDescription:
-      "・呼吸器内科クリニック4院の経営データを一元管理し、売上・来院数・新患数・レセプト単価・平均来院回数・コスト構造などを可視化する、医療機関向けのAI経営ダッシュボードを開発しました。\n・本システムでは、Googleスプレッドシートに蓄積された日次・月次・経費データをGAS API経由で取得し、Webダッシュボード上にグラフやKPIカードとして表示します。さらに、Dify APIと連携することで、単なる数値表示にとどまらず、各グラフや比較表の下にAIによる分析コメントを自動生成できる構成としました。\n・画面は「全体サマリー」「日次分析」「アラート設計」「コスト構造」の4つのタブで構成し、経営者やコンサルタントが現状把握から改善判断まで行いやすいように設計しています。特に、4院ごとのレセプト単価、平均来院回数、新患率、新患獲得コスト、固定費比率などを比較できるため、各院の強み・課題を直感的に把握できます。\n・また、曜日平均からの来院数乖離、客単価の急落、新患数の連続低下、平均来院回数の低下、予算進捗率の不足など、経営上の変化を早期に検知するアラートロジックも設計しました。これにより、問題が大きくなる前に対策を検討できる「先回り型」の経営管理を実現しています。\n・デザイン面では、医療・経営管理システムとして信頼感のある白背景と濃紺を基調に、Chart.jsを用いた視認性の高いグラフ表示を実装。PC・タブレット・スマートフォンでも閲覧しやすいレスポンシブ対応を前提に設計しました。\n・単なるダッシュボード制作ではなく、データ取得、API連携、AIインサイト生成、異常検知ロジック、UI設計までを含め、経営判断に活用できる実用的な業務システムとして構築した案件です。",
-    tags: [
-      {
-        name: "Next.js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Google Apps Script",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Dify API",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Firebase",
-        color: "pink-text-gradient",
-      },
-    ],
-    video: clinicAIVideos[0],
+      "・Googleスプレッドシートに蓄積された日次・月次・経費データを GAS API 経由で取得し、グラフと KPI カードで表示。\n・Dify API と連携し、各グラフや比較表の下に AI による分析コメントを自動生成。\n・「全体サマリー」「日次分析」「アラート設計」「コスト構造」の4タブ構成。院ごとのレセプト単価、平均来院回数、新患率、固定費比率などを比較できます。\n・曜日平均からの来院数乖離、客単価の急落、新患数の連続低下、予算進捗の不足などを早期に検知するアラートロジックを設計。\n・白と濃紺を基調にした信頼感のある画面を Chart.js で実装し、PC・タブレット・スマートフォンに対応しました。",
+    tags: ["Next.js", "Google Apps Script", "Dify API", "Firebase"],
     videos: clinicAIVideos,
   },
-
+  {
+    id: "offshore",
+    name: "海外向けVPSホスティングサービス",
+    category: "web-systems",
+    period: "2026",
+    role: "1名体制／設計〜リリース",
+    metric: "登録から継続課金までWebで完結",
+    description:
+      "サービス紹介・料金表示から、会員登録・認証・サブスクリプション決済までを備えた海外向けWebシステムを開発しました。",
+    detailedDescription:
+      "・Next.js によるサービスサイトと会員向け画面。料金プラン表示、問い合わせフォーム（Telegram 連携）、レスポンシブ対応。\n・Supabase Authentication による会員登録・ログイン、Supabase でのユーザー・サービスデータ管理。\n・Stripe による月額・年額のサブスクリプション決済と、暗号資産決済 API の連携。\n・Linux VPS の初期設定、SSL・独自ドメイン設定から本番リリースまで対応しました。",
+    tags: ["Next.js", "Supabase", "Stripe", "Linux VPS"],
+    videos: offshoreVideos,
+    live_link: "https://offshorehosting.plus/",
+  },
+  {
+    id: "construction-autoTool",
+    name: "建設業向け 寸法拾い・3D化ツール",
+    category: "workflow-automation",
+    role: "設計・実装",
+    metric: "PDFからの寸法拾いを半自動化",
+    description: "構造図PDFから寸法と部材情報を抽出し、3Dモデル化までを半自動化しました。",
+    detailedDescription:
+      "・構造図PDFから寸法・部材情報を抽出し、半自動で3D化。\n・基礎／地中梁／スラブのデータ抽出と照合処理。\n・特殊型枠面積の自動算出（手動での調整にも対応）。",
+    tags: ["Python"],
+    videos: constructionAutoToolVideos,
+  },
   {
     id: "kinkaitori",
-    name: "金買取サイト制作（API連携）",
+    name: "金買取サイト（API連携）",
     category: "hp-lp-coding",
-    description: "データ連携を活用した、情報更新型のWebサイトを開発しました。",
+    description: "スプレッドシートと連携し、金価格や地域別データが自動で更新されるWebサイトを開発しました。",
     detailedDescription:
-      "・スプレッドシートAPIと連携し、金価格・地域別データをリアルタイム取得。\n・グラフ描画および計算ロジックを設計・実装し、データドリブンなUIを構築。\n・国内価格推移や店舗情報を統合しUX向上に貢献。\n・GitHubでのチーム開発およびWPカスタム投稿設計にも対応。",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Wordpress",
-        color: "pink-text-gradient",
-      },
-    ],
-    video: kinkaitoriVideos[0],
+      "・スプレッドシート API と連携し、金価格・地域別データを取得して表示。\n・グラフ描画と計算ロジックを設計・実装。\n・国内価格の推移と店舗情報を統合し、比較しやすい画面に整理。\n・GitHub でのチーム開発と、WordPress のカスタム投稿設計にも対応しました。",
+    tags: ["WordPress", "JavaScript", "Google Sheets API"],
     videos: kinkaitoriVideos,
     live_link: "https://kinkaitori.com/",
   },
-
+  {
+    id: "noruman",
+    name: "NORUMAN 採用サイト",
+    category: "hp-lp-coding",
+    description: "採用情報サイトを制作しました。GSAP によるアニメーションを実装しています。",
+    detailedDescription: "保守しやすいコード構成を保ちながら、GSAP を活用したアニメーションを実装しました。",
+    tags: ["HTML", "CSS", "JavaScript", "GSAP"],
+    videos: norumanVideos,
+  },
   {
     id: "foodWholesale",
-    name: "食品卸業者向けサイト",
+    name: "食品卸業者 コーポレートサイト",
     category: "hp-lp-coding",
-    description:
-      "Figmaデザインをもとに、コーポレートサイトTOPページのレスポンシブコーディングおよびWordPress実装を担当。",
+    description: "Figmaデザインをもとに、TOPページのレスポンシブコーディングとWordPress実装を担当しました。",
     detailedDescription:
-      "Figmaデザインをもとに、コーポレートサイトTOPページ（約8000px）のレスポンシブコーディングを実装。WordPress環境でFROCSS／BEMを用いたCSS設計で構築。",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Wordpress",
-        color: "pink-text-gradient",
-      },
-    ],
-    video: foodWholesaleVideos[0],
+      "Figma デザインをもとに、約8,000pxのTOPページをレスポンシブでコーディング。WordPress 環境で FLOCSS／BEM による CSS 設計を行いました。",
+    tags: ["WordPress", "HTML", "CSS", "JavaScript"],
     videos: foodWholesaleVideos,
   },
-
-  {
-    id: "construction-autoTool",
-    name: "建設業向けの業務効率化ツール",
-    category: "workflow-automation",
-    description: "PDFから寸法拾い＋3D化　を半自動化ました",
-    detailedDescription:
-      "・構造図PDFから寸法・部材情報を抽出し、半自動で3D化 \n・基礎／地中梁／スラブのデータ抽出および照合処理 \n・特殊型枠面積の自動算出（手動調整も可能）",
-    tags: [
-      {
-        name: "Python",
-        color: "blue-text-gradient",
-      },
-    ],
-    video: constructionAutoToolVideos[0],
-    videos: constructionAutoToolVideos,
-  },
-
   {
     id: "jrosso",
     name: "JROSSO",
     category: "hp-lp-coding",
-    description: "衣料品販売サイト制作（コーディング＋WP実装）",
+    description: "衣料品販売サイトのコーディングとWordPress実装を担当しました。",
     detailedDescription:
-      "Illustratorで作成されたトップページのデザインをもとに、WordPressサイトの構築（コーディング＋WP実装）しました。",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Wordpress",
-        color: "pink-text-gradient",
-      },
-    ],
-    video: jrossoVideos[0],
+      "Illustrator で作成されたトップページのデザインをもとに、コーディングから WordPress 実装までを行いました。",
+    tags: ["WordPress", "HTML", "CSS", "JavaScript"],
     videos: jrossoVideos,
     live_link: "https://j-rosso.com/",
   },
-
-  {
-    id: "noruman",
-    name: "NORUMAN採用情報",
-    category: "hp-lp-coding",
-    description: "採用情報HPを制作ました。",
-    detailedDescription:
-      "すっきりとした保守性の高いコード構成と、GSAPを活用した魅力的なアニメーションを実装しました。",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "GSAP",
-        color: "pink-text-gradient",
-      },
-    ],
-    video: norumanVideos[0],
-    videos: norumanVideos,
-  },
-
   {
     id: "farmman",
-    name: "ファームマン",
+    name: "ファームマン LP",
     category: "hp-lp-coding",
-    description: "LPコーディング＆アニメーション実装＆サーバーアップました。",
-    detailedDescription:
-      "Figmaデザインを基に、1pxの妥協もない忠実なコーディングを行いました。\n テキストコーディング、SEO対策。",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "pink-text-gradient",
-      },
-    ],
-    video: farmmanVideos[0],
+    description: "LPのコーディング、アニメーション実装、サーバーへの公開まで担当しました。",
+    detailedDescription: "Figma デザインに忠実なコーディングを行い、テキストのマークアップと SEO 対策まで対応しました。",
+    tags: ["HTML", "CSS", "JavaScript"],
     videos: farmmanVideos,
   },
-
   {
     id: "oueBeauty",
-    name: "美容HP",
+    name: "美容クリニックサイト",
     category: "hp-lp-coding",
-    description: "美容HPコーディング＆Wordpress実装ました。",
-    detailedDescription:
-      "HPの全コーディングおよびWordPress移行を完了しました。\n 制作期間：10日",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Wordpress",
-        color: "pink-text-gradient",
-      },
-    ],
-    video: oueBeautyVideos[0],
+    description: "サイト全体のコーディングとWordPress移行を担当しました（制作期間10日）。",
+    detailedDescription: "サイト全体のコーディングと WordPress への移行を行いました。\n制作期間：10日",
+    tags: ["WordPress", "HTML", "CSS", "JavaScript"],
     videos: oueBeautyVideos,
     live_link: "https://oue-c-clinic-beauty.com/",
   },
-
   {
     id: "endoscope",
-    name: "内視鏡専門サイト",
+    name: "内視鏡専門クリニックサイト",
     category: "hp-lp-coding",
-    description: "HPコーディング＆Wordpress実装ました。",
-    detailedDescription:
-      "HPの全コーディングおよびWordPress移行を完了しました。\n 総9ページの構築を4日間で円滑に完了しました。",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Wordpress",
-        color: "pink-text-gradient",
-      },
-    ],
-    video: endoscopeVideos[0],
+    description: "全9ページのコーディングとWordPress移行を4日間で担当しました。",
+    detailedDescription: "全9ページのコーディングと WordPress への移行を行いました。\n制作期間：4日",
+    tags: ["WordPress", "HTML", "CSS", "JavaScript"],
     videos: endoscopeVideos,
     live_link: "https://oue-c-clinic-endoscope.com/",
   },
-
+  {
+    id: "goyokikidoctor",
+    name: "オンライン診療「御用聞きDr.」",
+    category: "hp-lp-coding",
+    description: "TOPページの改修コーディングを担当しました。",
+    detailedDescription: "提供された Figma デザインに忠実に、TOPページの改修をコーディングしました。\n制作期間：2日",
+    tags: ["HTML", "CSS", "JavaScript"],
+    videos: goyokikidoctorVideos,
+    live_link: "https://goyokikidoctor.com/",
+  },
+  {
+    id: "trust",
+    name: "九星気学 ライフデザイン講座",
+    category: "hp-lp-coding",
+    description: "スマートフォン表示の設計を含め、サイト制作とアニメーション実装を担当しました。",
+    detailedDescription:
+      "スマートフォン向けのデザインがなかったため、レスポンシブ表示を設計して調整しました。トップページには体験を高めるアニメーションを複数実装しています。\n制作期間：5日",
+    tags: ["WordPress", "HTML", "CSS", "JavaScript"],
+    videos: trustVideos,
+  },
   {
     id: "homeCare",
     name: "訪問診療・看護サイト",
     category: "hp-lp-coding",
-    description: "Topページをコーディングしました。",
-    detailedDescription:
-      "Figmaデザインを基に、1pxの妥協もない忠実なコーディングを行いました。\n 制作期間：2日",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "pink-text-gradient",
-      },
-    ],
-    video: homeCareVideos[0],
+    description: "Figmaデザインをもとに、TOPページをコーディングしました。",
+    detailedDescription: "Figma デザインに忠実に、TOPページをコーディングしました。\n制作期間：2日",
+    tags: ["HTML", "CSS", "JavaScript"],
     videos: homeCareVideos,
   },
-
-  {
-    id: "offshore",
-    name: "海外向けwebサービス",
-    category: "web-systems",
-    description:
-      "デザインからコーディング、サーバー配布までワンストップで担当して素敵に完了しました。",
-    detailedDescription:
-      "・Next.js+Supabase\n・VPS初期設定（SSL／ドメイン連携）\n・問合せフォーム→telegram連携\n・決済機能（stripe and crypto API）連携",
-    tags: [
-      {
-        name: "Next.js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "stripe",
-        color: "pink-text-gradient",
-      },
-    ],
-    video: offshoreVideos[0],
-    videos: offshoreVideos,
-    live_link: "https://offshorehosting.plus/",
-  },
-
   {
     id: "coinani",
     name: "iPhone購入サイト",
     category: "hp-lp-coding",
-    description: "アニメーションの実装ました。",
-    detailedDescription:
-      "アニメーションをJSを使って見事に完成させました。\n 制作期間：3日",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "pink-text-gradient",
-      },
-    ],
-    video: coinaniVideos[0],
+    description: "JavaScriptによるアニメーションを実装しました。",
+    detailedDescription: "JavaScript でページ内のアニメーションを実装しました。\n制作期間：3日",
+    tags: ["HTML", "CSS", "JavaScript"],
     videos: coinaniVideos,
   },
-
-  {
-    id: "goyokikidoctor",
-    name: "オンライン診療・薬の処方「御用聞きDr.」",
-    category: "hp-lp-coding",
-    description: "TOPページ改修コーディングました",
-    detailedDescription:
-      "提供されたFigmaデザインを忠実にコーディングで実装しました。\n 制作期間：2日",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "pink-text-gradient",
-      },
-    ],
-    video: goyokikidoctorVideos[0],
-    videos: goyokikidoctorVideos,
-    live_link: "https://goyokikidoctor.com/",
-  },
-
-  {
-    id: "trust",
-    name: "九星気学実践ライフデザイン講座",
-    category: "hp-lp-coding",
-    description: "HP制作ました。",
-    detailedDescription:
-      "スマートフォン向けのデザインがご用意されていない状況でしたので、私の方でレスポンシブ対応を考慮しつつ調整を行いました。\nまた、トップページに関しましては、ユーザー体験を高めるために複数のアニメーションを実装しております。\n 制作期間：5日",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Wordpress",
-        color: "pink-text-gradient",
-      },
-    ],
-    video: trustVideos[0],
-    videos: trustVideos,
-  },
 ];
-
-export { experiences, projects, services, technologies, testimonials };

@@ -3,7 +3,7 @@ module.exports = {
   extends: ["next/core-web-vitals"],
   ignorePatterns: [".next", "node_modules", "out"],
   rules: {
-    // Icons, project media, and WebGL textures are plain <img> sources.
+    // Background art and icons are plain <img> sources from /public.
     "@next/next/no-img-element": "off",
   },
 };

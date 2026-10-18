@@ -1,8 +1,8 @@
 export function AboutIntro() {
   return (
     <section id="about" className="about-band scroll-mt-24" aria-labelledby="about-title">
-      <img className="about-bg about-bg-pc" src="/about-bg.png" alt="" />
-      <img className="about-bg about-bg-sp" src="/about-bg_sp.png" alt="" />
+      <img className="about-bg about-bg-pc" src="/about-bg.webp" alt="" loading="lazy" />
+      <img className="about-bg about-bg-sp" src="/about-bg_sp.webp" alt="" loading="lazy" />
       <div className="about-panel">
         <div className="about-index">
           <p className="about-num">01</p>
