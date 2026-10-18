@@ -7,11 +7,11 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
 const emailjsConfig = {
-  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-  contactEmail: import.meta.env.VITE_CONTACT_EMAIL,
-  contactName: import.meta.env.VITE_CONTACT_NAME || "Portfolio Owner",
+  serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+  templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+  publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL,
+  contactName: process.env.NEXT_PUBLIC_CONTACT_NAME || "Portfolio Owner",
 };
 
 const isEmailjsConfigured = () =>

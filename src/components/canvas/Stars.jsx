@@ -1,6 +1,8 @@
 import { useState, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial, Preload, Sphere } from "@react-three/drei";
+import { PointMaterial } from "@react-three/drei/core/PointMaterial";
+import { Points } from "@react-three/drei/core/Points";
+import { Preload } from "@react-three/drei/core/Preload";
 import * as random from "maath/random/dist/maath-random.esm";
 const Stars = (props) => {
   const ref = useRef();
