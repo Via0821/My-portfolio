@@ -75,10 +75,10 @@ export function Header() {
           <a
             href={resume.href}
             download={resume.filename}
-            className="resume-btn hidden items-center gap-2 rounded-full font-medium tracking-[0.04em] text-[#f6f3ec] min-[769px]:inline-flex"
+            className="resume-btn hidden items-center rounded-full min-[769px]:inline-flex"
           >
-            最新の職務経歴書
-            <span className="resume-arrow" aria-hidden="true">
+            <span className="resume-label">最新の職務経歴書</span>
+            <span className="resume-badge" aria-hidden="true">
               <ArrowDown />
             </span>
           </a>
@@ -147,14 +147,12 @@ export function Header() {
 
 function ArrowDown() {
   return (
-    <>
-      <svg viewBox="0 0 24 28" className="resume-static" aria-hidden="true">
-        <path className="resume-base" d="M3.5 25.5h17" />
-      </svg>
-      <svg viewBox="0 0 24 28" className="resume-drop" aria-hidden="true">
-        <path d="M12 1.8v7.2" />
-        <path d="M6.8 7.2 12 13.2 17.2 7.2" />
-      </svg>
-    </>
+    <svg viewBox="0 0 16 16" aria-hidden="true">
+      <g className="resume-drop">
+        <path d="M8 2.6v6.6" />
+        <path d="M5 6.6 8 9.6l3-3" />
+      </g>
+      <path d="M4 12.8h8" />
+    </svg>
   );
 }
