@@ -1,11 +1,13 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei/core/OrbitControls";
+import { Preload } from "@react-three/drei/core/Preload";
+import { useGLTF } from "@react-three/drei/core/Gltf";
 
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+  const computer = useGLTF("/desktop_pc/scene.gltf");
 
   return (
     <mesh>
